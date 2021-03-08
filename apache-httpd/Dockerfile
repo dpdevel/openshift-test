@@ -1,4 +1,4 @@
-FROM centos7
+FROM centos/centos7
 
 RUN rpm --rebuilddb && \
   yum install -y httpd \
