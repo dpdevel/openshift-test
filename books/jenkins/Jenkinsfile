@@ -47,11 +47,7 @@ pipeline {
                 echo '### Running eslint on code ###'
                 sh 'cd books; npm run lint'
             }
-        }                sh '''
-                       oc project ${DEV_PROJECT}
-                       oc new-app --name books --as-deployment-config nodejs:12~${APP_GIT_URL} --build-env npm_config_registry=${NEXUS_SERVER} --context-dir ${APP_NAME}
-                       oc expose svc/${APP_NAME}
-                   '''
+        }    
 
         stage('Launch new app in DEV env') {
             steps {
