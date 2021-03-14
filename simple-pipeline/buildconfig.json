@@ -1,0 +1,23 @@
+{
+    "kind": "BuildConfig",
+    "apiVersion": "build.openshift.io/v1",
+    "metadata": {
+        "name": "pipeline"
+    },
+    "spec": {
+        "source": {
+            "type": "Git",
+            "git": {
+                "uri": "https://github.com/dpdevel/openshift-test.git",
+                "ref": "simple-pipeline"
+            },
+            "contextDir": "simple-pipeline"
+        },
+        "strategy": {
+            "type": "JenkinsPipeline",
+            "jenkinsPipelineStrategy": {
+                "jenkinsfilePath": "Jenkinsfile"
+            }
+         }
+     }
+}
