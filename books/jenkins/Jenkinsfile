@@ -12,8 +12,8 @@ pipeline {
 
     environment {
         //TODO: Edit these vars as per your env
-        DEV_PROJECT = "dpastore-books-dev"
-        STAGE_PROJECT = "dpastore-books-stage"
+        DEV_PROJECT = "domenico-pastore-dev"
+        STAGE_PROJECT = "domenico-pastore-stage"
         APP_GIT_URL = "https://github.com/dpdevel/openshift-test"
         NEXUS_SERVER = "https://registry.npmjs.org"
 
