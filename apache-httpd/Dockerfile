@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7:7.6
+FROM centos:7
 
 RUN rpm --rebuilddb && \
   yum install -y httpd \
